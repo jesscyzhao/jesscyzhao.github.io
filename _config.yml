@@ -216,6 +216,12 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _research
+      path: ""
+      type: research
+    values:
+      layout: single
+      author_profile: true
       # share: true
       # comments: true
   # _publications
