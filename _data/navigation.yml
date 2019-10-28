@@ -2,9 +2,11 @@
 main:
   # - title: "Publications"
   #   url: /publications/
-  - title: "cv"
+  - title: "CV"
     url: /cv/
    
+  - title: "Research"
+    url: /research/    
   # - title: "Talks"
   #   url: /talks/    
 
