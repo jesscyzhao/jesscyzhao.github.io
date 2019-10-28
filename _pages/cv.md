@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 
-[pdf version](http://apoorvalal.github.io/files/ChunyiCV2019.pdf)
+[pdf version](http://jesscyzhao.github.io/files/ChunyiCV2019.pdf)
 
 ## Education
 
