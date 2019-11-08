@@ -17,7 +17,9 @@ Point pattern data is a unique type of spatial data where the location of incide
     </embed>
 </object>
 
-Inference of Boston city vandalism point pattern in 2017 Apr-Jun. 
+
+![Inference of Boston city vandalism point pattern in 2017 Apr-Jun.](http://jesscyzhao.github.io/images/boston_van_Q2_2017_real_data_no_label-1.png)
+
 
 - 2019, Working paper 
 - Develop a novel approach to model the Non-homogeneous Poisson Process with Bernstein Polynomials mixture while retaining a connection to a Dirichlet Process prior placed on the NHPP density function. 

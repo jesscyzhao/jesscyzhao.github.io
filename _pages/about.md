@@ -11,5 +11,5 @@ redirect_from:
 
 PhD Student, Department of Statistics, UC Santa Cruz 
 
-![UCSC Statistics](https://grad.soe.ucsc.edu/stats)
+[UCSC Statistics](https://grad.soe.ucsc.edu/stats)
 
