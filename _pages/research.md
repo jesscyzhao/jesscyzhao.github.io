@@ -11,8 +11,7 @@ Point pattern data is a unique type of spatial data where the location of incide
 
 ## _Bernstein Polynomial modeling for Poisson Process intensity_  with Athanasios Kottas
 
-
-![Inference of Boston city vandalism point pattern in 2017 Apr-Jun.](http://jesscyzhao.github.io/images/boston_van_Q2_2017_real_data_no_label-1.png)
+![Inference of Boston city vandalism point pattern in 2017 Apr-Jun.](http://jesscyzhao.github.io/images/boston_van_Q2_2017_real_data_no_label-1.PNG)
 
 
 - 2019, Working paper 
