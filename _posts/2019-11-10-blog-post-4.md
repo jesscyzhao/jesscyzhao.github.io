@@ -1,5 +1,5 @@
 ---
-title: 'Accounting for customers' death: a Bayesian hiearchical extension to the Pareto/NBD churn model
+title: 'Accounting for customers' death: a Bayesian hiearchical extension to the Pareto/NBD churn model'
 date: 2019-10-28
 permalink: /posts/2019/11/blog-post-4/
 tags:
