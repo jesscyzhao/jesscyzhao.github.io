@@ -14,7 +14,7 @@ This post is a review of my research on customer churn patterns at Two Six Capit
 
 The Pareto/NBD model makes the following assumptions: (i) Poisson process purchase pattern with rate $\lambda$ (ii) Exponential customer lifetime with rate $\mu$. To account for heteogeneity among the customers, the model assumes Gamma distribution for $\lambda$ and $\mu$ across population. The marginal likelihood is then Negative binomial for the purchase behavior and Pareto (of the second kind) for customer lifetime. The maximum likelihood estimates can be obtained by various optimization schemes and was used as the default by the company. 
 
-However, often times in retail business data, a customer repeat purchase behavior stops a couple of the years after entering the panel and remains dormant till the end of the observation windows. This leads to the high churn rate for initial cohort and often is not captured well by the vanilla Pareto/NBD model that models purchase and customer lifetime separately. To connect the purchase behavior and survival time on an individual level, [<u>Abe 2009</u>](https://pubsonline.informs.org/doi/pdf/10.1287/mksc.1090.0502) proposed the Hiearchical Bayesian extension to the Pareto/NBD model with the following formulation 
+However, often times in retail business data, a customer repeat purchase behavior stops a couple of the years after entering the panel and remains dormant till the end of the observation windows. This leads to the high churn rate for initial cohort and often is not captured well by the vanilla Pareto/NBD model that models purchase and customer lifetime separately. To connect the purchase behavior and survival time on an individual level, [Abe 2009](https://pubsonline.informs.org/doi/pdf/10.1287/mksc.1090.0502) proposed the Hiearchical Bayesian extension to the Pareto/NBD model with the following formulation 
 
 
 Let $x_i$ be the number of transactions for customer $i$ in observation window $(0, T]$, $\tau_i$ be the latent customer survival time, and $t_{x_i}$ be the last observable transaction time. 
@@ -31,25 +31,20 @@ where $X_i$ is the covariates for customer $i$.
 
 With this formulation, the model accounts for possible "death" of a customer before the end observation $T$ and also allows correlation between the customer lifetime and purchase rate. The latter is key for customer profiling that is often the interests to retail business analysis. Furthermore, with a Bayesian framework, meaningful inference for each individual can be derived based on posterior samples of $\mu_i$ and $\lambda_i$, e.g. a posterior distribution for mean residual life time for customer $i$ can be obtained through the posterior sample of $\mu_i$. 
 
-
 The posterior inference is done by first augmenting the parameter spaces with latent variable $z_i$, whether customer $i$ is alive at $T$ and $y_i$, the death time for customer $i$ if $z_i = 0$. Notice that $y_i \in [t_{x_i}, T]$. Without losing generality, I will ignore the subscript $i$ in the following derivation. The likelihood for $x, t_x| z, y, \mu, \lambda$ is 
 
-$$
-\begin{aligned}
+\begin{align}
 L(x, t_x| z = 1, y, \mu, \lambda) &= P(\text{last purchase at $t_x$, $x$ purchase in total|alive at T}) P(\text{alive})\\
 & = P(\text{x$^{th}$ purchases at $t_x$, no purchase $(t_x, T]$| alive at T})  P(\text{alive}) \\
 & = \frac{\lambda^x t_x^{x-1}}{(x-1)!}\exp\{-\lambda t_x\} \exp(-\lambda(T-t_x)) \exp(-\mu T)
-\end{aligned}
-$$
+\end{align}
 
 
-$$
-\begin{aligned}
+\begin{align}
 L(x, t_x| z = 0, y, \mu, \lambda) &= P(\text{last purchase at $t_x$, $x$ purchase in total|dead at y}) P(\text{dead at y}) \\
 & = P(\text{x$^{th}$ purchases at $t_x$, no purchase $(t_x, y]$| alive at y})  P(\text{deat at y}) \\
 & = \frac{\lambda^x t_x^{x-1}}{(x-1)!}\exp\{-\lambda t_x\} \exp(-\lambda(T-y)) \mu\exp(-\mu y)
-\end{aligned}
-$$
+\end{align}
 
 
 The joint posterior is  
@@ -68,12 +63,10 @@ Notice that the full conditional for $y_i$ when $z_i = 0$ is a truncated exponen
 
 We can integrate $y$ out to obtain the likelihood for $x, t_x | z = 0, \mu, \lambda$
 
-$$
-\begin{aligned}
+\begin{align}
 L(x, t_x| z = 0, \mu, \lambda) &= \frac{\lambda^x t_x^{x-1}}{(x-1)!}\exp\{-\lambda t_x\}\int_{t_x}^T  \exp(-\lambda(T-y)) \mu\exp(-\mu y) dy \\
 & = \frac{\lambda^x t_x^{x-1}}{(x-1)!}\exp\{-\lambda t_x\}\frac{\mu}{ \mu + \lambda} \exp(-(\lambda + \mu)(T-y)) 
-\end{aligned}
-$$
+\end{align}
 
 
 Assume Bernoulli prior for $z$, $\pi(z = 0) = \pi(z = 1) = 0.5 $, the full conditional for $z$ is 
