@@ -24,3 +24,23 @@ redirect_from:
 + Nonparametric Bayesian 
 + Spatial statistics
 + Mixture models 
+
+
+## Coursework at UCSC 
+
++ Probability and Statistics 
+	- 203(J. Lee): Introduction to Probabilty Theory 
+	- 204(R. Prado): Introduction to Statistical Data Analysis 	
+	- 205B(R. Guhaniyogi): Intermediate Classical Inference
+	- 256(R. Guhaniyogi): Linear Statistical Models 
+	- 263(R. Guhaniyogi): Stochastic Process
++ Bayesian Statistics
+	- 206B(J. Lee): Intermediate Bayesian Inference 
+	- 207(B. Sanso): Intermediate Bayesian Statistical Modeling 
+	- 241(A. Kottas): Bayesian Nonparametrics (2 quarter independent studies)
+	- 221(B. Sanso): Bayesian decision theory 
++ Special topics
+	- 245(B. Sanso): Spatial Statistics 
+	- 274(A. Kottas): Generalized Linear Models 
+	- 224(J. Lee): survival analysis (on-going)
+	- 223(R. Prado): Time Series Analysis (Winter 2020)
