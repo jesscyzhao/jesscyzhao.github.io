@@ -8,7 +8,12 @@ date: 2019-10-01
 ---
 
 
-## 1. Use R Markdown 
+# STAT 204 Introduction to Data Analysis 
+
+Here are relevant resources for STAT 204. 
+
+
+## Use R Markdown
 
 ### 1.1 Helpful Guide
 
@@ -91,3 +96,18 @@ Input equations, analysis, and conclusion. You will notice that all pictures and
 #### Step 4: compile final.tex file to get your final.pdf file. 
 
 This is it! With these 4 steps, you can write a proper ASA format journal article using RMD. I find this approach extremely helpful when taking the take-home exams under 24-48 hour time limit.
+
+
+## Use `lm` in R 
+
+### $R^2$ computed by `lm` when there is no intercept
+
+When there is no intercept, `R` uses a different formula to compute $R^2$:
+
+$$
+R^2 = 1 - \frac{\sum_i (y_i - \hat{y_i})^2}{\sum_i y_i^2}
+$$
+
+The numerator in the second term will increase when the intercept is omitted, while the denominator will increase much more, which results an artificially inflated $R^2$. Such $R^2$ should not be used for model comparison. 
+
+Here is a more detailed (explanation)[https://stats.stackexchange.com/questions/26176/removal-of-statistically-significant-intercept-term-increases-r2-in-linear-mo]
