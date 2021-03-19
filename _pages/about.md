@@ -9,11 +9,11 @@ redirect_from:
 ---
 
 
-PhD Student, Department of Statistics, UC Santa Cruz 
+PhD Candidate, Department of Statistics, UC Santa Cruz 
 
 [UCSC Statistics](https://grad.soe.ucsc.edu/stats)
 
-I am a third year PhD student at UCSC working on Nonparametric Bayesian methods for modeling spatial point processes. I have the good fortune to be advised by [Prof. Athanasios Kottas](https://users.soe.ucsc.edu/~thanos/).
+I am a PhD candidate in the Department of Statistics at UCSC working on Nonparametric Bayesian methods for modeling spatial point processes. I have the good fortune to be advised by [Prof. Athanasios Kottas](https://users.soe.ucsc.edu/~thanos/).
 
 My research interests include spatial statistics, Bayesian nonparametric methods, and mixture models. I am also interested in high-performance computing and am a big fan of [Julia](https://julialang.org/).
 
